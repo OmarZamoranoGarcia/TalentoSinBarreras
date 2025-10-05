@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    /*Fuentes*/
+  --font-Poppins: 'Poppins', sans-serif;
+  --font-Nunito: 'Nunito', sans-serif;
+
+  /*Colores*/
+  --AzulPrincipal: #264653;
+  --Naranja: #E76F51;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#formRegistro{
+    font-family: var(--font-Nunito);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--AzulPrincipal);
+    color: white;
+}
+
+#contenedorTitulo{
+    display: flex;
+    align-items: center;
+}
+
+#contenedorTitulo svg{
+    height: 48px;
+    width: 48px;
+}
+
+#contenedorInputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.labelRegistro{
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.inputRegistro{
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+    width: 250px;
+    height: 40px;
+}
+
+#selectRolCuenta{
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+    width: 250px;
+    height: 40px;
+}
+
+#btnSumbit{
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+    width: 250px;
+    height: 40px;
+    font-weight: bolder;
+    color: white;
+    background-color: var(--Naranja);
+}
+
+@media screen and (min-width: 376px) {
+  /*Pendiente el codigo para screen de pc y tablet*/
+
+}
