@@ -16,11 +16,6 @@
     box-sizing: border-box;
 }
 
-#logo{
-    height: 120px;
-    width: 150px;
-}
-
 #contenedorForm{
     font-family: var(--font-Nunito);
     height: 100vh;
@@ -39,6 +34,11 @@
     flex-direction: column;
     align-items: center;
     color: white;
+}
+
+.logo{
+    height: 200px;
+    width: 250px;
 }
 
 #contenedorInputs{

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { InputsLogin, Sumbit } from "./InputsLogin"
-import { Logo } from "../assets/LogoBlanco";
+import { LogoBlanco } from "../assets/LogoBlanco";
 import "./Login.css";
 
 export function Login(){
@@ -10,7 +10,7 @@ export function Login(){
     return(
         <div id="contenedorForm">
             <form action="" id="formLogin">
-                <Logo  id="logo" />
+                <LogoBlanco/>
                 <h1>Talento sin barreras</h1>
 
                 <div id="contenedorInputs">

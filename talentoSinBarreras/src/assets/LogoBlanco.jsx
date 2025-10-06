@@ -1,10 +1,11 @@
 import * as React from "react"
-export const Logo = (props) => (
+export const LogoBlanco = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={150}
-    height={150}
-    fill="none"
+    // width={90}
+    // height={90}
+    viewBox="0 0 150 120"
+    className="logo"
     {...props}
   >
     <path
