@@ -1,4 +1,4 @@
-export function ImputsLogin({ label, placeholder, value, onChange, type = "text"}){
+export function InputsLogin({ label, placeholder, value, onChange, type = "text"}){
     return(
         <>
             <label className="labelRegistro">{label}</label>

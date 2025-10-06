@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ImputsLogin, Select, Sumbit } from "./InputsLogin"
-import "./InputsLogin.css";
+import { InputsLogin, Select, Sumbit } from "./InputsLogin"
+import "./Registro.css";
 
 export function Registro(){
     const [nombre, setNombre] = useState("");
@@ -25,35 +25,35 @@ export function Registro(){
         </div>
         
         <div id="contenedorInputs">
-            <ImputsLogin
+            <InputsLogin
                 label="Nombre (s)"
                 placeholder="Nombre (s)"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
             />
 
-            <ImputsLogin
+            <InputsLogin
                 label="Apellido paterno"
                 placeholder="Apellido paterno"
                 value={apellidoPaterno}
                 onChange={(e) => setApellidoPaterno(e.target.value)}
             />
 
-            <ImputsLogin
+            <InputsLogin
                 label="Apellido materno"
                 placeholder="Apellido materno"
                 value={apellidoMaterno}
                 onChange={(e) => setApellidoMaterno(e.target.value)}
             />
 
-            <ImputsLogin
+            <InputsLogin
                 label="Correo"
                 placeholder="Correo"
                 value={correo}
                 onChange={(e) => setCorreo(e.target.value)}
             />
 
-            <ImputsLogin
+            <InputsLogin
                 label="Contraseña"
                 placeholder="Contraseña"
                 value={contrasenia}

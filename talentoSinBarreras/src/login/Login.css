@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    /*Fuentes*/
+  --font-Poppins: 'Poppins', sans-serif;
+  --font-Nunito: 'Nunito', sans-serif;
+
+  /*Colores*/
+  --AzulPrincipal: #264653;
+  --Naranja: #E76F51;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#logo{
+    height: 120px;
+    width: 150px;
+}
+
+#contenedorForm{
+    font-family: var(--font-Nunito);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--AzulPrincipal);
+}
+
+#formLogin{
+    background-color: var(--AzulPrincipal);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#contenedorInputs{
+    display: flex;
+    gap: 5px;
+}
+
+#btnSumbit{
+    font-size: 18px;
+}

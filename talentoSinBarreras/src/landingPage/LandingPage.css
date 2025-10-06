@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    /*Fuentes*/
+  --font-Poppins: 'Poppins', sans-serif;
+  --font-Nunito: 'Nunito', sans-serif;
+
+  /*Colores*/
+  --AzulPrincipal: #264653;
+  --Naranja: #E76F51;
+  --Amarillo: #e9c46a;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#logo{
+    width: 90px;
+    height: 90px;
+}
+
+header{
+    padding: 10px;
+    font-family: var(--font-Nunito);
+    background-color: white;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-title p{
+    font-family: var(--font-Poppins);
+    font-style: italic;
+    font-size: 10px;
+    margin-left: 40px;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--AzulPrincipal);
+}
+
+.carrusel {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  font-family: var(--font-Nunito);
+}
+
+.carrusel::-webkit-scrollbar {
+  height: 2px;              /* grosor del scroll horizontal */
+}
+.carrusel::-webkit-scrollbar-track {
+  background: #eee;          /* fondo de la barra */
+  border-radius: 5px;
+}
+.carrusel::-webkit-scrollbar-thumb {
+  background: red;            /* color del “thumb” */
+  border-radius: 5px;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  background-color: #eee;
+  text-align: center;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.slide p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: white;
+}
