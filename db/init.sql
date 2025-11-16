@@ -24,8 +24,8 @@ CREATE TABLE Usuario (
 GO
 
 -- Tabla de Contraseñas
-CREATE TABLE Contrasenas (
-    IDContrasena INT IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE Contrasenias (
+    IDContrasenia INT IDENTITY(1,1) PRIMARY KEY,
     IDUsuario INT NOT NULL,
     ContrasenaHash VARCHAR(255) NOT NULL,
     Salt VARCHAR(255) NOT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE Organizacion (
 GO
 
 -- Tabla CategoriaCampaña
-CREATE TABLE CategoriaCampaña (
+CREATE TABLE CategoriaCampania (
     IDCategoria INT PRIMARY KEY,
     NombreCategoria VARCHAR(100),
     Descripcion TEXT
@@ -106,8 +106,8 @@ CREATE TABLE CategoriaCampaña (
 GO
 
 -- Tabla Campaña
-CREATE TABLE Campaña (
-    IDCampaña INT IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE Campania (
+    IDCampania INT IDENTITY(1,1) PRIMARY KEY,
     IDOrganizacion INT,
     Nombre VARCHAR(150),
     Descripcion TEXT,
@@ -127,12 +127,12 @@ GO
 CREATE TABLE RegistroParticipacion (
     IDRegistro INT IDENTITY(1,1) PRIMARY KEY,
     IDVoluntario INT,
-    IDCampaña INT,
+    IDCampania INT,
     FechaParticipacion DATE,
     HorasTrabajadas INT,
     Observaciones TEXT,
     FOREIGN KEY (IDVoluntario) REFERENCES Voluntario(IDVoluntario),
-    FOREIGN KEY (IDCampaña) REFERENCES Campaña(IDCampaña)
+    FOREIGN KEY (IDCampania) REFERENCES Campania(IDCampania)
 );
 GO
 
@@ -141,14 +141,14 @@ CREATE TABLE CertificadoHoras (
     IDCertificado INT PRIMARY KEY,
     IDRegistro INT,
     IDVoluntario INT,
-    IDCampaña INT,
+    IDCampania INT,
     IDInstitucion INT,
     HorasTrabajadas INT,
     FechaEmision DATE,
     Estado VARCHAR(20) NOT NULL DEFAULT 'progreso' CHECK (Estado IN ('validado', 'no validado', 'progreso')),
     FOREIGN KEY (IDRegistro) REFERENCES RegistroParticipacion(IDRegistro),
     FOREIGN KEY (IDVoluntario) REFERENCES Voluntario(IDVoluntario),
-    FOREIGN KEY (IDCampaña) REFERENCES Campaña(IDCampaña),
+    FOREIGN KEY (IDCampania) REFERENCES Campania(IDCampania),
     FOREIGN KEY (IDInstitucion) REFERENCES Institucion(IDInstitucion)
 );
 GO
@@ -179,8 +179,8 @@ CREATE TABLE Multa (
 GO
 
 -- Tabla Reseña
-CREATE TABLE Reseña (
-    IDReseña INT PRIMARY KEY,
+CREATE TABLE Resenia (
+    IDResenia INT PRIMARY KEY,
     IDUsuario INT,
     TipoComentario VARCHAR(100),
     Contenido TEXT,
@@ -208,9 +208,9 @@ CREATE TABLE Logro (
     IDVoluntario INT,
     TipoLogro VARCHAR(100),
     FechaEntrega DATE,
-    IDCampaña INT,
+    IDCampania INT,
     FOREIGN KEY (IDVoluntario) REFERENCES Voluntario(IDVoluntario),
-    FOREIGN KEY (IDCampaña) REFERENCES Campaña(IDCampaña)
+    FOREIGN KEY (IDCampania) REFERENCES Campania(IDCampania)
 );
 GO
 
