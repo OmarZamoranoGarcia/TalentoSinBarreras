@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  /*Fuentes*/
+  --font-Poppins: "Poppins", sans-serif;
+  --font-Nunito: "Nunito", sans-serif;
+
+  /*Colores*/
+  --AzulPrincipal: #264653;
+  --AzulClaro: #88b8cb;
+  --Naranja: #e76f51;
+  --Amarillo: #e9c46a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 375px;
+}
+
+.campania-card {
+  width: 100%;
+  background-color: var(--Naranja);
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  margin-top: 1rem;
+}
+
+#btn-follow {
+    color: white;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#btn-follow:hover {
+  background-color: white;
+  color: red;
+}

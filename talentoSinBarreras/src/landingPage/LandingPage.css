@@ -1,32 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap");
 
 :root {
   /*Fuentes*/
-  --font-Poppins: 'Poppins', sans-serif;
-  --font-Nunito: 'Nunito', sans-serif;
+  --font-Poppins: "Poppins", sans-serif;
+  --font-Nunito: "Nunito", sans-serif;
 
   /*Colores*/
   --AzulPrincipal: #264653;
-  --Naranja: #E76F51;
+  --Naranja: #e76f51;
   --Amarillo: #e9c46a;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   min-width: 375px;
 }
 
-#logo{
+#logo {
   width: 90px;
   height: 90px;
 }
 
-header{
+header {
   padding: 10px;
   font-family: var(--font-Nunito);
   background-color: white;
@@ -34,17 +34,16 @@ header{
   font-size: 14px;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: auto;
 }
 
-#header-title p{
+#header-title p {
   font-family: var(--font-Poppins);
   font-style: italic;
   font-size: 10px;
-  margin-left: 40px;
 }
 
-#main{
+#main {
   min-height: 100vh;
   max-height: 100%;
   width: 100%;
@@ -56,7 +55,7 @@ header{
   justify-content: space-evenly;
 }
 
-#main-p{
+#main-p {
   text-align: center;
   font-family: var(--font-Nunito);
   font-weight: lighter;
@@ -64,13 +63,13 @@ header{
   padding: 18px;
 }
 
-#imgPrincipal{
+#imgPrincipal {
   height: auto;
   width: 100%;
   object-fit: cover;
 }
 
-.btnLandingPage{
+.btnLandingPage {
   font-family: var(--font-Nunito);
   font-weight: bolder;
   color: white;
@@ -82,11 +81,11 @@ header{
   align-items: center;
   background-color: var(--AzulPrincipal);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4),
-              -5px -5px 10px rgba(58, 90, 107, 0.6);
+    -5px -5px 10px rgba(58, 90, 107, 0.6);
   border: 0;
 }
 
-.btnLandingPage:hover{
+.btnLandingPage:hover {
   background-color: var(--Naranja);
   color: white;
 }
@@ -101,14 +100,14 @@ header{
 }
 
 .carrusel::-webkit-scrollbar {
-  height: 5px;              /* grosor del scroll horizontal */
+  height: 5px; /* grosor del scroll horizontal */
 }
 .carrusel::-webkit-scrollbar-track {
-  background: #eee;          /* fondo de la barra */
+  background: #eee; /* fondo de la barra */
   border-radius: 5px;
 }
 .carrusel::-webkit-scrollbar-thumb {
-  background: black;            /* color del “thumb” */
+  background: black; /* color del “thumb” */
   border-radius: 5px;
 }
 
@@ -131,7 +130,7 @@ header{
   grid-area: col1;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .slide p {
@@ -139,4 +138,125 @@ header{
   font-size: 14px;
   color: white;
   text-align: center;
+}
+
+/* ================================
+  MÓVIL MEDIANO (>= 440px)
+================================ */
+@media (min-width: 440px) {
+  header {
+    justify-content: space-around;
+  }
+
+  #header-title p {
+    font-size: 12px;
+  }
+
+  .btn2 {
+    margin-top: 1rem;
+  }
+
+  .slide p {
+    font-size: 15px;
+  }
+}
+
+/* ================================
+  error de los botones
+================================ */
+@media (min-width: 570px) {
+  .btnLandingPage {
+    margin-top: 2rem;
+  }
+}
+
+/* ================================
+  TABLETS (>= 768px)
+================================ */
+@media (min-width: 768px) {
+  /* HEADER */
+  header {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  #logo {
+    width: 95px;
+    height: 95px;
+  }
+
+  #header-title p {
+    font-size: 12px;
+  }
+
+  /* MAIN */
+  #main {
+    padding: 20px;
+    justify-content: space-around;
+  }
+
+  #main-p {
+    font-size: 18px;
+    padding: 20px;
+    max-width: 600px; /* evita que el texto se extienda demasiado */
+  }
+
+  #imgPrincipal {
+    max-width: 600px; /* evita que ocupe demasiado espacio */
+    border-radius: 10px;
+  }
+
+  /* BOTÓN */
+  .btnLandingPage {
+    width: 220px;
+    height: 45px;
+    font-size: 16px;
+    padding: 10px;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  /* CARRUSEL */
+  .carrusel {
+    max-width: auto;
+  }
+
+  .slide {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .slide img {
+    max-height: 250px;
+  }
+
+  .slide p {
+    font-size: 16px;
+  }
+}
+
+/* ================================
+  desktop 1024px
+================================ */
+@media (min-width: 1024px) {
+  header {
+    padding: 0;
+    font-size: 26px;
+  }
+
+  #logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  #main-p {
+    width: 800px;
+    font-size: 30px;
+    text-align: center;
+    max-width: 99%;
+  }
+
+  #header-title p {
+    font-size: 12px;
+  }
 }
