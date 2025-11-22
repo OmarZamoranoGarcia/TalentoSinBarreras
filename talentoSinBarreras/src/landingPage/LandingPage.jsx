@@ -29,7 +29,7 @@ console.log("LandingPage render");
             <main id="main">
                 <p id="main-p">Talento Sin Barreras conecta talento, educación y comunidad, ofreciendo empleo inclusivo, oportunidades de servicio social y servicio comunitario.</p>
                 <button className="btnLandingPage" type="button" onClick={()=>navigate("/registro")}>Registrarse</button>
-                <button className="btnLandingPage" type="button" onClick={()=>navigate("/login")}>Iniciar Sesión</button>
+                <button className="btnLandingPage btn2" type="button" onClick={()=>navigate("/login")}>Iniciar Sesión</button>
                 <img src={img1} id="imgPrincipal"/>     
                 <Carrusel slides={slides}/> 
             </main>

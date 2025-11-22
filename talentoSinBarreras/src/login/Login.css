@@ -1,51 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap");
 
 :root {
-    /*Fuentes*/
-  --font-Poppins: 'Poppins', sans-serif;
-  --font-Nunito: 'Nunito', sans-serif;
+  /*Fuentes*/
+  --font-Poppins: "Poppins", sans-serif;
+  --font-Nunito: "Nunito", sans-serif;
 
   /*Colores*/
   --AzulPrincipal: #264653;
-  --Naranja: #E76F51;
+  --Naranja: #e76f51;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-#contenedorForm{
-    font-family: var(--font-Nunito);
-    height: 100vh;
-    width: 100%;
-    display: flex;
+#contenedorForm {
+  font-family: var(--font-Nunito);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--AzulPrincipal);
+}
+
+#formLogin {
+  background-color: var(--AzulPrincipal);
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  height: 200px;
+  width: 250px;
+}
+
+#contenedorInputs {
+  display: flex;
+  gap: 5px;
+}
+
+#btnSumbit {
+  font-size: 18px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  #formLogin {
+    height: 100%;
     justify-content: center;
-    align-items: center;
-    background-color: var(--AzulPrincipal);
-}
+  }
 
-#formLogin{
-    background-color: var(--AzulPrincipal);
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
+  .logo {
+    height: 300px;
+    width: 450px;
+  }
 
-.logo{
-    height: 200px;
-    width: 250px;
-}
+  #contenedorInputs {
+    font-size: 20px;
+  }
 
-#contenedorInputs{
-    display: flex;
-    gap: 5px;
-}
-
-#btnSumbit{
-    font-size: 18px;
+  #btnSumbit {
+    font-size: 20px;
+  }
 }
